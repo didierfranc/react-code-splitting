@@ -1,4 +1,4 @@
-# react-code-splitting
+# react-code-splitting ✂️
 
 You're working on a great app powered by React, bundled with webpack and your bundle size increases ... You're in the right place to solve this modern JS apps nightmare.
 
@@ -46,4 +46,5 @@ You can view this snippets in context [here](https://github.com/didierfranc/redu
 
 ## More
 
-Webpack examples with some code splitting techniques https://github.com/webpack/webpack/tree/master/examples
+- Why and how it works : [Straightforward code splitting with React and Webpack](https://medium.com/@DidierFranc/straightforward-code-splitting-with-react-and-webpack-4b94c28f6c3f)
+- [Webpack examples](https://github.com/webpack/webpack/tree/master/examples)
