@@ -36,7 +36,9 @@ var Async = function (_React$Component) {
         _this.C = c;_this.forceUpdate();
       });
     }, _this.render = function () {
-      return _this.C ? _react2.default.createElement(_this2.C.default, null) : null;
+      var componentProps = _this.props.componentProps;
+
+      return _this.C ? _react2.default.createElement(_this2.C.default, componentProps) : null;
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 

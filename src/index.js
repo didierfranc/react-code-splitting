@@ -5,7 +5,10 @@ export default class Async extends React.Component {
     this.props.load.then((c) => { this.C = c; this.forceUpdate() })
   }
 
-  render = () => this.C ? <this.C.default /> : null
+  render = () => {
+    const {componentProps} = this.props
+    return this.C ? <this.C.default {...componentProps} /> : null
+  }
 }
 
 Async.propTypes = {

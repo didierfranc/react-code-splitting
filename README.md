@@ -28,16 +28,21 @@ const App = ({ user }) => (
 #### With code splitting
 
 You're not logged in ? `<Login />` component is the only loaded, `<Home />` will be loaded when the user will be logged in.
+
+Use componentProps to pass props to lazy loaded component.
+
 ```jsx
 import Async from 'react-code-splitting'
 
 import Login from './Login'
 const Home = () => <Async load={import('./Home')} />
+const LostPassword = (props) => <Async load={import('./LostPassword')} componentProps={props}/>
 
 const App = ({ user }) => (
   <Body>
     {user.loggedIn ? <Route path="/" component={Home} /> : <Redirect to="/login" />}
     <Route path="/login" component={Login} />
+    <Route path="/lostpassword" component={LostPassword} />
   </Body>
 )
 ```
