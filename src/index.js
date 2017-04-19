@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class Async extends React.Component {
   componentWillMount = () => {
@@ -12,5 +13,5 @@ export default class Async extends React.Component {
 }
 
 Async.propTypes = {
-  load: React.PropTypes.instanceOf(Promise).isRequired,
+  load: PropTypes.instanceOf(Promise).isRequired,
 }
