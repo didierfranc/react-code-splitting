@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 export default class Async extends React.Component {
   componentWillMount = () => {
+    this.cancelUpdate = false
     this.props.load.then((c) => { 
       this.C = c
       if (!this.cancelUpdate) {
