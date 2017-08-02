@@ -37,8 +37,13 @@ var Async = function (_React$Component) {
 
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Async.__proto__ || Object.getPrototypeOf(Async)).call.apply(_ref, [this].concat(args))), _this), _this.componentWillMount = function () {
       _this.props.load.then(function (c) {
-        _this.C = c;_this.forceUpdate();
+        _this.C = c;
+        if (!_this.cancelUpdate) {
+          _this.forceUpdate();
+        }
       });
+    }, _this.componentWillUnmount = function () {
+      _this.cancelUpdate = true;
     }, _this.render = function () {
       var componentProps = _this.props.componentProps;
 
