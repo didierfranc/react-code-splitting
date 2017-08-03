@@ -36,7 +36,7 @@ import Async from 'react-code-splitting'
 
 import Login from './Login'
 const Home = () => <Async load={import('./Home')} />
-const LostPassword = (props) => <Async load={import('./LostPassword')} componentProps={props}/>
+const LostPassword = props => <Async load={import('./LostPassword')} componentProps={props}/>
 
 const App = ({ user }) => (
   <Body>
@@ -47,7 +47,7 @@ const App = ({ user }) => (
 )
 ```
 
-You can view this snippets in context [here](https://github.com/didierfranc/redux-react-starter/blob/master/src/components/App.js#L11) !
+You can view this snippets in context [here](https://github.com/didierfranc/redux-react-starter/blob/master/src/components/App.js#L12) !
 
 ## More
 
