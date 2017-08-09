@@ -38,6 +38,9 @@ import Login from './Login'
 const Home = () => <Async load={import('./Home')} />
 const LostPassword = props => <Async load={import('./LostPassword')} componentProps={props}/>
 
+// With `loader` component, and a `mockTimeout` to see the loader working
+// const LostPassword = props => <Async load={import('./LostPassword')} componentProps={props} loader={() => <div>Loading</div>} mockTimeout="1000" />
+
 const App = ({ user }) => (
   <Body>
     {user.loggedIn ? <Route path="/" component={Home} /> : <Redirect to="/login" />}
