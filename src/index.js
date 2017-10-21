@@ -23,7 +23,6 @@ export default class Async extends React.Component {
         ? <this.C.default {...componentProps} />
         : <this.C {...componentProps} />
       : null
-    return this.C ? <this.C.default {...componentProps} /> : null
   }
 }
 
