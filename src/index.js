@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 export default class Async extends React.Component {
   componentWillMount = () => {
     this.cancelUpdate = false
-    this.props.load.then((c) => { 
+    let {load} = this.props
+    if (typeof load === 'function' && !load.then) load = load(this)
+    load.then((c) => {
       this.C = c
       if (!this.cancelUpdate) {
         this.forceUpdate()
@@ -27,5 +29,5 @@ export default class Async extends React.Component {
 }
 
 Async.propTypes = {
-  load: PropTypes.instanceOf(Promise).isRequired,
+  load: PropTypes.oneOfType([PropTypes.func, PropTypes.instanceOf(Promise)]).isRequired,
 }
