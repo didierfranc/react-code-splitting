@@ -53,3 +53,6 @@ You can view this snippets in context [here](https://github.com/didierfranc/redu
 
 - Why and how it works : [Straightforward code splitting with React and Webpack](https://medium.com/@DidierFranc/straightforward-code-splitting-with-react-and-webpack-4b94c28f6c3f)
 - [Webpack examples](https://github.com/webpack/webpack/tree/master/examples)
+
+<img src="https://raw.githubusercontent.com/didierfranc/donate/master/qr.png" width="100" height="100">
+
