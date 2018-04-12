@@ -51,7 +51,27 @@ const App = ({ user }) => (
 )
 ```
 
-You can view this snippets in context [here](https://github.com/didierfranc/redux-react-starter/blob/master/src/components/App.js#L12) !
+You can view this snippet in context [here](https://github.com/didierfranc/redux-react-starter/blob/master/src/components/App.js#L12) !
+
+#### Promise-returning functions
+
+You may also pass in a function that returns the promise when invoked.  This is useful when you have code like
+
+```jsx
+const MyComponent = import('./ReallyHeavyComponent');
+
+/* conditional code ... */ <Async load={MyComponent} />
+```
+where you might end up loading a heavy bundle even if you don't need it after all.
+
+Instead, you may wrap the `import` in a function like
+
+```jsx
+const MyComponent = () => import('./ReallyHeavyComponent');
+/* conditional code ... */ <Async load={MyComponent} />
+```
+
+to defer that load up to the very last moment.
 
 ## More
 
