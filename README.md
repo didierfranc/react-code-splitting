@@ -1,18 +1,20 @@
 # react-code-splitting ✂️
 
-You're working on a great app powered by React, bundled with webpack and your bundle size increases ... You're in the right place to solve this modern JS apps nightmare.
+You're working on a great app powered by React, bundled with Webpack and your bundle size increases...
 
+You're in the right place to solve this modern JS app nightmare.
 
-## Prerequisite
+## Prerequisites
 
-- You're using [Webpack 2](https://webpack.js.org/)
-- You've polyfilled ***Promise*** to support old browser
+- You're using [Webpack 2 or newer](https://webpack.js.org/)
+- You've polyfilled ***Promise*** to support old browsers
 
 ## How-to
 
-#### Without code splitting
+### Without code splitting
 
 `<Login />` + `<Home />` are loaded at the first start
+
 ```jsx
 import Login from './Login'
 import Home from './Home'
@@ -25,11 +27,13 @@ const App = ({ user }) => (
 )
 ```
 
-#### With code splitting
+### With code splitting
 
-You're not logged in ? `<Login />` component is the only loaded, `<Home />` will be loaded when the user will be logged in.
+Not logged in? `<Login />` component is the only one loaded.
 
-Use componentProps to pass props to lazy loaded component.
+`<Home />` will be loaded when the user is be logged in.
+
+Use `componentProps` to pass props to the lazy loaded component.
 
 ```jsx
 import Async from 'react-code-splitting'
