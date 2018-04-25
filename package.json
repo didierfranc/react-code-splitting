@@ -7,18 +7,25 @@
   "author": "Didier Franc",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "rollup -c",
     "start": "webpack-dev-server --open --config example/webpack.config.js"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
+    "chalk": "^2.4.0",
+    "gzip-size": "^4.1.0",
+    "pretty-bytes": "^4.0.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "rollup": "^0.58.2",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-uglify": "^3.0.0",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
