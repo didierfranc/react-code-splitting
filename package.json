@@ -6,6 +6,9 @@
   "repository": "https://github.com/didierfranc/react-code-splitting",
   "author": "Didier Franc",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "start": "webpack-dev-server --open --config example/webpack.config.js"
