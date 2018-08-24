@@ -5,7 +5,7 @@ You're working on a great app powered by React, bundled with webpack and your bu
 
 ## Prerequisite
 
-- You're using [Webpack 2](https://webpack.js.org/)
+- You're using [Webpack 2+](https://webpack.js.org/)
 - You've polyfilled ***Promise*** to support old browser
 
 ## How-to
