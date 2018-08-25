@@ -47,6 +47,26 @@ const App = ({ user }) => (
 )
 ```
 
+### with loader fallback 
+you can show a fallback loader while the async component is being loaded. usually in slow networks there will be a blank screen while the async component is loaded.
+
+```jsx
+import Async from 'react-code-splitting'
+
+import Login from './Login'
+const FallbackLoader = () => (<p>Loading please wait....</p>)
+const Home = () => <Async load={import('./Home')} />
+const LostPassword = props => <Async load={import('./LostPassword')} componentProps={props} loader={FallbackLoader}/>
+
+const App = ({ user }) => (
+  <Body>
+    {user.loggedIn ? <Route path="/" component={Home} /> : <Redirect to="/login" />}
+    <Route path="/login" component={Login} />
+    <Route path="/lostpassword" component={LostPassword} />
+  </Body>
+)
+```
+
 You can view this snippets in context [here](https://github.com/didierfranc/redux-react-starter/blob/master/src/components/App.js#L12) !
 
 ## More
