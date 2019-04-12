@@ -1,5 +1,7 @@
 # react-code-splitting ✂️
 
+`react-code-splitting` is an "old" library, React has implemented a great solution since and it's called [React.lazy](https://reactjs.org/docs/code-splitting.html#reactlazy) go get it !
+
 You're working on a great app powered by React, bundled with webpack and your bundle size increases ... You're in the right place to solve this modern JS apps nightmare.
 
 
